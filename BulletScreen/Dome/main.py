@@ -6,6 +6,26 @@ import websockets
 from UI import App, Frame1
 import pyautogui as pa
 
+
+async def test():
+    # 连接服务器(先启动服务器:python manage.py runserver 8080)
+    async with websockets.connect("ws://localhost:8080/ws/s/") as websocket:
+        # 向服务器发送数据(要监听的直播间url)
+        await websocket.send(json.dumps({'command': 'https://www.douyu.com/85894'}))
+        # 接收服务器返回的弹幕数据
+        while True:
+            msg = await websocket.recv()
+            print(msg)
+
+asyncio.run(test())
+
+
+
+
+
+
+
+
 com = re.compile(r"[^A-J0-9]*?([A-Z].*?[1-9][0-9]?)[^A-J0-9]*?([A-Z].*?[1-9][0-9]?)")
 
 
@@ -43,11 +63,11 @@ c = len(v)
 a = v[0].__eq__(v[1])
 # 要抓取弹幕的直播间地址
 url = 'https://live.bilibili.com/734'
-if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
-    threading.Thread(target=main, args=(loop, url)).start()
-    app = App()
-    app.run()
+# if __name__ == '__main__':
+#     loop = asyncio.get_event_loop()
+#     threading.Thread(target=main, args=(loop, url)).start()
+#     app = App()
+#     app.run()
 
 # https://www.douyu.com/85894
 # https://live.bilibili.com/734
