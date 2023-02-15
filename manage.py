@@ -27,5 +27,4 @@ if __name__ == '__main__':
 # python manage.py runserver 8080
 
 
-# https://live.bilibili.com/462?popular_rank=1&visit_id=cbame39cu6w0
 
