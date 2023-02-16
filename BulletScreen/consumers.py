@@ -21,7 +21,6 @@ def Work(ep, ul):
     async def printer(q):
         try:
             while True:
-                # print(f'线程: {len(threading.enumerate())}')
                 if BulletScreenConsumer.isStop:
                     BulletScreenConsumer.dmc.stop()
                     BulletScreenConsumer.data.queue.clear()

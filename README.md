@@ -1,4 +1,5 @@
-##  弹幕
+##  弹幕 **开箱即用,不需要再安装python环境**
+`运行项目目录下的run.bat运行django开发服务器,test.bat是一个使用示例`
 ## 引用了 <https://github.com/wbt5/real-url/>
 ## 连接到服务器后,向服务器发送{"command":直播间url}数据,即可不断地从服务器接收到直播间的实时弹幕.
 <br> 
@@ -60,7 +61,7 @@ public async void WebSocket()
 ```
 <br>
 
-##### [有用资助我](https://qq292.github.io://qq292.github.io/)
+##### [对我有用,资助他](https://qq292.github.io://qq292.github.io/)
 
 
 
